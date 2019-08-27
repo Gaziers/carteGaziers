@@ -61,4 +61,4 @@ folium.features.Marker(
     location=[gaziers_df.lat.mean(), gaziers_df.lon.mean()],
     tooltip='Point central'
 ).add_to(m)
-m.save('/home/kevin/Programmation/Dash/index.html')
+m.save('index.html')
