@@ -69,4 +69,4 @@ folium.map.Marker(
         tooltip="Centre des aziers"
     ).add_to(fmap)
 
-fmap.save("map.html")
+fmap.save("index.html")
