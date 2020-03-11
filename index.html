@@ -1,1 +1,186 @@
-<html><body><p>Eh dis donc l'ancien du gaz</p></body></html>
+<!DOCTYPE html>
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+<title> Where are the gaziers ? </title>
+        <script>
+            L_NO_TOUCH = false;
+            L_DISABLE_3D = false;
+        </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.5.1/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.5.1/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://rawcdn.githack.com/python-visualization/folium/master/folium/templates/leaflet.awesome.rotate.css"/>
+    <style>html, body {width: 100%;height: 100%;margin: 0;padding: 0;}</style>
+    <style>#map {position:absolute;top:0;bottom:0;right:0;left:0;}</style>
+
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style> #map_world {position: relative;width: 100.0%;height: 100.0%;left: 0.0%;top: 0.0%;}</style>
+
+</head>
+<body>
+
+            <div class="folium-map" id="map_world" ></div>
+
+</body>
+<script>
+
+            var map_world = L.map("map_world",{center: [45.0, 4.0], crs: L.CRS.EPSG3857, zoom: 4, zoomControl: true, preferCanvas: false,});
+
+
+
+            var tile_layer = L.tileLayer(
+                "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {"attribution": "Data by \u0026copy; \u003ca href=\"http://openstreetmap.org\"\u003eOpenStreetMap\u003c/a\u003e, under \u003ca href=\"http://www.openstreetmap.org/copyright\"\u003eODbL\u003c/a\u003e.", "detectRetina": false, "maxNativeZoom": 18, "maxZoom": 18, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
+            ).addTo(map_world);
+
+<!-- Antoine-->
+
+            var marker_Antoine = L.marker([45.245892, 4.273893], {}).addTo(map_world);
+
+        var icon_butterfly = L.icon({"iconSize": [30, 30], "iconUrl": "https://i.pinimg.com/originals/ce/76/b8/ce76b874769fa0c3761bc0a9bc064309.png"});
+        marker_Antoine.setIcon(icon_butterfly);
+
+        var popup_antoine = L.popup({"maxWidth": "100%"});
+
+            var content_Antoine = $(`<div id="content_Antoine" style="width: 100.0%; height: 100.0%;">Antoine</div>`)[0];
+            popup_antoine.setContent(content_Antoine);
+
+        marker_Antoine.bindPopup(popup_antoine);
+
+            marker_Antoine.bindTooltip(`<div> Antoine </div>`, {"sticky": true});
+
+<!-- Baptiste-->
+
+            var marker_Baptiste = L.marker([-33.847927, 150.6517795], {}).addTo(map_world);
+
+        var icon_kangaroo = L.icon({"iconSize": [30, 30], "iconUrl": "https://cdn2.iconfinder.com/data/icons/animals-92/28/animal_lineal_color-19-512.png"});
+        marker_Baptiste.setIcon(icon_kangaroo);
+
+        var popup_Baptiste = L.popup({"maxWidth": "100%"});
+
+            var content_Baptiste = $(`<div id="content_Baptiste" style="width: 100.0%; height: 100.0%;">Baptiste</div>`)[0];
+            popup_Baptiste.setContent(content_Baptiste);
+
+        marker_Baptiste.bindPopup(popup_Baptiste);
+
+            marker_Baptiste.bindTooltip(`<div> Baptiste </div>`, {"sticky": true});
+
+<!-- Gaspard-->
+
+            var marker_Gaspard = L.marker([45.5219, -73.594157],  {}).addTo(map_world);
+
+        var icon_baboon = L.icon({"iconSize": [30, 30], "iconUrl": "https://www.pngrepo.com/png/232688/170/baboon.png"});
+        marker_Gaspard.setIcon(icon_baboon);
+
+        var popup_Gaspard = L.popup({"maxWidth": "100%"});
+
+            var content_Gaspard = $(`<div id="content_Gaspard" style="width: 100.0%; height: 100.0%;">Gaspard</div>`)[0];
+            popup_Gaspard.setContent(content_Gaspard);
+
+        marker_Gaspard.bindPopup(popup_Gaspard);
+
+            marker_Gaspard.bindTooltip(`<div> Gaspard </div>`, {"sticky": true});
+
+<!-- Kevin-->
+
+            var marker_Kevin = L.marker([48.856697, 2.351462], {}).addTo(map_world);
+
+        var icon_fox = L.icon({"iconSize": [30, 30], "iconUrl": "https://cdn.iconscout.com/icon/premium/png-256-thumb/fox-91-563338.png"});
+        marker_Kevin.setIcon(icon_fox);
+
+        var popup_kevin = L.popup({"maxWidth": "100%"});
+
+            var content_Kevin = $(`<div id="content_Kevin" style="width: 100.0%; height: 100.0%;">Kevin</div>`)[0];
+            popup_kevin.setContent(content_Kevin);
+
+        marker_Kevin.bindPopup(popup_kevin);
+
+            marker_Kevin.bindTooltip(`<div> Kevin </div>`, {"sticky": true});
+
+<!-- Mathieu-->
+
+
+            var marker_Mathieu = L.marker([43.296174, 5.369953], {}).addTo(map_world);
+
+        var icon_buffalo = L.icon({"iconSize": [30, 30], "iconUrl": "https://cdn1.iconfinder.com/data/icons/animal-flat-2/128/animal_buffalo-u-zoo-512.png"});
+        marker_Mathieu.setIcon(icon_buffalo);
+
+        var popup_Mathieu = L.popup({"maxWidth": "100%"});
+
+            var content_Mathieu = $(`<div id="content_Mathieu" style="width: 100.0%; height: 100.0%;">Mathieu</div>`)[0];
+            popup_Mathieu.setContent(content_Mathieu);
+
+        marker_Mathieu.bindPopup(popup_Mathieu);
+
+            marker_Mathieu.bindTooltip(`<div> Mathieu </div>`, {"sticky": true});
+
+<!-- Martin-->
+
+            var marker_Martin = L.marker([45.22156,4.0529718], {}).addTo(map_world);
+
+        var icon_dog = L.icon({"iconSize": [30, 30], "iconUrl": "https://pupuphooray.com/wp-content/uploads/2019/03/dog-icon.png"});
+        marker_Martin.setIcon(icon_dog);
+
+        var popup_Martin = L.popup({"maxWidth": "100%"});
+
+            var content_Martin = $(`<div id="content_Martin" style="width: 100.0%; height: 100.0%;">Martin</div>`)[0];
+            popup_Martin.setContent(content_Martin);
+
+        marker_Martin.bindPopup(popup_Martin);
+
+            marker_Martin.bindTooltip(`<div> Martin </div>`, {"sticky": true});
+
+<!-- Panda-->
+
+            var marker_Panda = L.marker([45.5217994, -73.594154], {}).addTo(map_world);
+
+        var icon_panda = L.icon({"iconSize": [30, 30], "iconUrl": "https://dl2.macupdate.com/images/icons256/52971.png"});
+        marker_Panda.setIcon(icon_panda);
+
+        var popup_Panda = L.popup({"maxWidth": "100%"});
+
+            var content_Panda = $(`<div id="content_Panda" style="width: 100.0%; height: 100.0%;">Panda</div>`)[0];
+            popup_Panda.setContent(content_Panda);
+
+        marker_Panda.bindPopup(popup_Panda);
+
+            marker_Panda.bindTooltip(`<div> Panda </div>`, {"sticky": true});
+
+<!-- Thibaut-->
+
+            var marker_Thibaut = L.marker([48.3922561, -4.5350162], {}).addTo(map_world);
+
+        var icon_hen = L.icon({"iconSize": [30, 30], "iconUrl": "https://images.emojiterra.com/twitter/v12/512px/1f414.png"});
+        marker_Thibaut.setIcon(icon_hen);
+
+        var popup_Thibaut = L.popup({"maxWidth": "100%"});
+
+            var content_Thibaut = $(`<div id="content_Thibaut" style="width: 100.0%; height: 100.0%;">Thibault</div>`)[0];
+            popup_Thibaut.setContent(content_Thibaut);
+
+        marker_Thibaut.bindPopup(popup_Thibaut);
+
+            marker_Thibaut.bindTooltip(`<div> Thibaut </div>`, {"sticky": true});
+
+<!-- Epicentre-->
+
+            var marker_epicenter = L.marker([36.02314014, 1.871643], {}).addTo(map_world);
+
+        var popup_epicenter = L.popup({"maxWidth": "100%"});
+
+            var content_epicenter = $(`<div id="content_epicenter" style="width: 100.0%; height: 100.0%;">Epicentre des gaziers</div>`)[0];
+            popup_epicenter.setContent(content_epicenter);
+
+        marker_epicenter.bindPopup(popup_epicenter);
+
+            marker_epicenter.bindTooltip(`<div> Epicentre des gaziers  </div>`, {"sticky": true});
+
+</script>
