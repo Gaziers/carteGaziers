@@ -1,17 +1,17 @@
 <!DOCTYPE html>
-<head>
+<head>    
     <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
-<title> Where are the gaziers ? </title>
+    
         <script>
             L_NO_TOUCH = false;
             L_DISABLE_3D = false;
         </script>
-
-    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.5.1/dist/leaflet.js"></script>
+    
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.6.0/dist/leaflet.js"></script>
     <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.5.1/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.6.0/dist/leaflet.css"/>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css"/>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css"/>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css"/>
@@ -19,168 +19,254 @@
     <link rel="stylesheet" href="https://rawcdn.githack.com/python-visualization/folium/master/folium/templates/leaflet.awesome.rotate.css"/>
     <style>html, body {width: 100%;height: 100%;margin: 0;padding: 0;}</style>
     <style>#map {position:absolute;top:0;bottom:0;right:0;left:0;}</style>
-
+    
             <meta name="viewport" content="width=device-width,
                 initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-            <style> #map_world {position: relative;width: 100.0%;height: 100.0%;left: 0.0%;top: 0.0%;}</style>
-
+            <style>
+                #map_9ef5d3363ce24d729b8963eacfa9b942 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+            </style>
+        
 </head>
-<body>
-
-            <div class="folium-map" id="map_world" ></div>
-
+<body>    
+    
+            <div class="folium-map" id="map_9ef5d3363ce24d729b8963eacfa9b942" ></div>
+        
 </body>
-<script>
+<script>    
+    
+            var map_9ef5d3363ce24d729b8963eacfa9b942 = L.map(
+                "map_9ef5d3363ce24d729b8963eacfa9b942",
+                {
+                    center: [35.638996025, 12.340154650000002],
+                    crs: L.CRS.EPSG3857,
+                    zoom: 2,
+                    zoomControl: true,
+                    preferCanvas: false,
+                }
+            );
 
-            var map_world = L.map("map_world",{center: [45.0, 4.0], crs: L.CRS.EPSG3857, zoom: 4, zoomControl: true, preferCanvas: false,});
+            
 
-
-
-            var tile_layer = L.tileLayer(
+        
+    
+            var tile_layer_ef9113f5ae874db6ab5f8774c2def89d = L.tileLayer(
                 "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",
                 {"attribution": "Data by \u0026copy; \u003ca href=\"http://openstreetmap.org\"\u003eOpenStreetMap\u003c/a\u003e, under \u003ca href=\"http://www.openstreetmap.org/copyright\"\u003eODbL\u003c/a\u003e.", "detectRetina": false, "maxNativeZoom": 18, "maxZoom": 18, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
-            ).addTo(map_world);
-
-<!-- Antoine-->
-
-            var marker_Antoine = L.marker([45.245892, 4.273893], {}).addTo(map_world);
-
-        var icon_butterfly = L.icon({"iconSize": [30, 30], "iconUrl": "https://i.pinimg.com/originals/ce/76/b8/ce76b874769fa0c3761bc0a9bc064309.png"});
-        marker_Antoine.setIcon(icon_butterfly);
-
-        var popup_antoine = L.popup({"maxWidth": "100%"});
-
-            var content_Antoine = $(`<div id="content_Antoine" style="width: 100.0%; height: 100.0%;">Antoine</div>`)[0];
-            popup_antoine.setContent(content_Antoine);
-
-        marker_Antoine.bindPopup(popup_antoine);
-
-            marker_Antoine.bindTooltip(`<div> Antoine </div>`, {"sticky": true});
-
-<!-- Baptiste-->
-
-            var marker_Baptiste = L.marker([-33.847927, 150.6517795], {}).addTo(map_world);
-
-        var icon_kangaroo = L.icon({"iconSize": [30, 30], "iconUrl": "https://cdn2.iconfinder.com/data/icons/animals-92/28/animal_lineal_color-19-512.png"});
-        marker_Baptiste.setIcon(icon_kangaroo);
-
-        var popup_Baptiste = L.popup({"maxWidth": "100%"});
-
-            var content_Baptiste = $(`<div id="content_Baptiste" style="width: 100.0%; height: 100.0%;">Baptiste</div>`)[0];
-            popup_Baptiste.setContent(content_Baptiste);
-
-        marker_Baptiste.bindPopup(popup_Baptiste);
-
-            marker_Baptiste.bindTooltip(`<div> Baptiste </div>`, {"sticky": true});
-
-<!-- Gaspard-->
-
-            var marker_Gaspard = L.marker([45.5182122,-73.5727788],  {}).addTo(map_world);
-
-        var icon_baboon = L.icon({"iconSize": [30, 30], "iconUrl": "https://www.pngrepo.com/png/232688/170/baboon.png"});
-        marker_Gaspard.setIcon(icon_baboon);
-
-        var popup_Gaspard = L.popup({"maxWidth": "100%"});
-
-            var content_Gaspard = $(`<div id="content_Gaspard" style="width: 100.0%; height: 100.0%;">Gaspard</div>`)[0];
-            popup_Gaspard.setContent(content_Gaspard);
-
-        marker_Gaspard.bindPopup(popup_Gaspard);
-
-            marker_Gaspard.bindTooltip(`<div> Gaspard </div>`, {"sticky": true});
-
-<!-- Kevin-->
-
-            var marker_Kevin = L.marker([48.856697, 2.351462], {}).addTo(map_world);
-
-        var icon_fox = L.icon({"iconSize": [30, 30], "iconUrl": "https://cdn.iconscout.com/icon/premium/png-256-thumb/fox-91-563338.png"});
-        marker_Kevin.setIcon(icon_fox);
-
-        var popup_kevin = L.popup({"maxWidth": "100%"});
-
-            var content_Kevin = $(`<div id="content_Kevin" style="width: 100.0%; height: 100.0%;">Kevin</div>`)[0];
-            popup_kevin.setContent(content_Kevin);
-
-        marker_Kevin.bindPopup(popup_kevin);
-
-            marker_Kevin.bindTooltip(`<div> Kevin </div>`, {"sticky": true});
-
-<!-- Mathieu-->
-
-
-            var marker_Mathieu = L.marker([43.296174, 5.369953], {}).addTo(map_world);
-
-        var icon_buffalo = L.icon({"iconSize": [30, 30], "iconUrl": "https://cdn1.iconfinder.com/data/icons/animal-flat-2/128/animal_buffalo-u-zoo-512.png"});
-        marker_Mathieu.setIcon(icon_buffalo);
-
-        var popup_Mathieu = L.popup({"maxWidth": "100%"});
-
-            var content_Mathieu = $(`<div id="content_Mathieu" style="width: 100.0%; height: 100.0%;">Mathieu</div>`)[0];
-            popup_Mathieu.setContent(content_Mathieu);
-
-        marker_Mathieu.bindPopup(popup_Mathieu);
-
-            marker_Mathieu.bindTooltip(`<div> Mathieu </div>`, {"sticky": true});
-
-<!-- Martin-->
-
-            var marker_Martin = L.marker([45.22156,4.0529718], {}).addTo(map_world);
-
-        var icon_dog = L.icon({"iconSize": [30, 30], "iconUrl": "https://pupuphooray.com/wp-content/uploads/2019/03/dog-icon.png"});
-        marker_Martin.setIcon(icon_dog);
-
-        var popup_Martin = L.popup({"maxWidth": "100%"});
-
-            var content_Martin = $(`<div id="content_Martin" style="width: 100.0%; height: 100.0%;">Martin</div>`)[0];
-            popup_Martin.setContent(content_Martin);
-
-        marker_Martin.bindPopup(popup_Martin);
-
-            marker_Martin.bindTooltip(`<div> Martin </div>`, {"sticky": true});
-
-<!-- Panda-->
-
-            var marker_Panda = L.marker([45.5182122,-73.5727788], {}).addTo(map_world);
-
-        var icon_panda = L.icon({"iconSize": [30, 30], "iconUrl": "https://dl2.macupdate.com/images/icons256/52971.png"});
-        marker_Panda.setIcon(icon_panda);
-
-        var popup_Panda = L.popup({"maxWidth": "100%"});
-
-            var content_Panda = $(`<div id="content_Panda" style="width: 100.0%; height: 100.0%;">Panda</div>`)[0];
-            popup_Panda.setContent(content_Panda);
-
-        marker_Panda.bindPopup(popup_Panda);
-
-            marker_Panda.bindTooltip(`<div> Panda </div>`, {"sticky": true});
-
-<!-- Thibaut-->
-
-            var marker_Thibaut = L.marker([48.3922561, -4.5350162], {}).addTo(map_world);
-
-        var icon_hen = L.icon({"iconSize": [30, 30], "iconUrl": "https://images.emojiterra.com/twitter/v12/512px/1f414.png"});
-        marker_Thibaut.setIcon(icon_hen);
-
-        var popup_Thibaut = L.popup({"maxWidth": "100%"});
-
-            var content_Thibaut = $(`<div id="content_Thibaut" style="width: 100.0%; height: 100.0%;">Thibault</div>`)[0];
-            popup_Thibaut.setContent(content_Thibaut);
-
-        marker_Thibaut.bindPopup(popup_Thibaut);
-
-            marker_Thibaut.bindTooltip(`<div> Thibaut </div>`, {"sticky": true});
-
-<!-- Epicentre-->
-
-            var marker_epicenter = L.marker([36.02314014, 1.871643], {}).addTo(map_world);
-
-        var popup_epicenter = L.popup({"maxWidth": "100%"});
-
-            var content_epicenter = $(`<div id="content_epicenter" style="width: 100.0%; height: 100.0%;">Epicentre des gaziers</div>`)[0];
-            popup_epicenter.setContent(content_epicenter);
-
-        marker_epicenter.bindPopup(popup_epicenter);
-
-            marker_epicenter.bindTooltip(`<div> Epicentre des gaziers  </div>`, {"sticky": true});
-
+            ).addTo(map_9ef5d3363ce24d729b8963eacfa9b942);
+        
+    
+            var marker_5958114c46d44ab395c97c7f0a7d6a2a = L.marker(
+                [35.638996025, 12.340154650000002],
+                {}
+            ).addTo(map_9ef5d3363ce24d729b8963eacfa9b942);
+        
+    
+            var icon_8846e11b4cd848c489b75aad5811fa33 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "green", "prefix": "glyphicon"}
+            );
+            marker_5958114c46d44ab395c97c7f0a7d6a2a.setIcon(icon_8846e11b4cd848c489b75aad5811fa33);
+        
+    
+        var popup_83421ce80b3140afa5678d7023308dc0 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_e71b539d48d64ed1be3d661ee05b8feb = $(`<div id="html_e71b539d48d64ed1be3d661ee05b8feb" style="width: 100.0%; height: 100.0%;">Centre des Gaziers</div>`)[0];
+            popup_83421ce80b3140afa5678d7023308dc0.setContent(html_e71b539d48d64ed1be3d661ee05b8feb);
+        
+
+        marker_5958114c46d44ab395c97c7f0a7d6a2a.bindPopup(popup_83421ce80b3140afa5678d7023308dc0)
+        ;
+
+        
+    
+    
+            var marker_ce0fa8090f4145ce90b787f8f0a859cd = L.marker(
+                [45.239055, 3.958689],
+                {}
+            ).addTo(map_9ef5d3363ce24d729b8963eacfa9b942);
+        
+    
+        var custom_icon_388a7336333a4350a2316de137166b95 = L.icon({"iconSize": 40, "iconUrl": "https://dl2.macupdate.com/images/icons256/52971.png"});
+        marker_ce0fa8090f4145ce90b787f8f0a859cd.setIcon(custom_icon_388a7336333a4350a2316de137166b95);
+        
+    
+        var popup_ba57c660402e46739e9c27f301081ae9 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_6a73da6193174d56a9c58833210dd9b6 = $(`<div id="html_6a73da6193174d56a9c58833210dd9b6" style="width: 100.0%; height: 100.0%;">Panda</div>`)[0];
+            popup_ba57c660402e46739e9c27f301081ae9.setContent(html_6a73da6193174d56a9c58833210dd9b6);
+        
+
+        marker_ce0fa8090f4145ce90b787f8f0a859cd.bindPopup(popup_ba57c660402e46739e9c27f301081ae9)
+        ;
+
+        
+    
+    
+            var marker_26a7fb04d1534e639773226bfa908d75 = L.marker(
+                [43.55, 6.93],
+                {}
+            ).addTo(map_9ef5d3363ce24d729b8963eacfa9b942);
+        
+    
+        var custom_icon_9ac19bacc2324629a680d2e85faf7c4a = L.icon({"iconSize": 40, "iconUrl": "https://pupuphooray.com/wp-content/uploads/2019/03/dog-icon.png"});
+        marker_26a7fb04d1534e639773226bfa908d75.setIcon(custom_icon_9ac19bacc2324629a680d2e85faf7c4a);
+        
+    
+        var popup_c8f4c63c0900410ea06512eb0bcfb0b1 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_a8babbdb48884ac6a5551457bcd9e160 = $(`<div id="html_a8babbdb48884ac6a5551457bcd9e160" style="width: 100.0%; height: 100.0%;">Martin</div>`)[0];
+            popup_c8f4c63c0900410ea06512eb0bcfb0b1.setContent(html_a8babbdb48884ac6a5551457bcd9e160);
+        
+
+        marker_26a7fb04d1534e639773226bfa908d75.bindPopup(popup_c8f4c63c0900410ea06512eb0bcfb0b1)
+        ;
+
+        
+    
+    
+            var marker_1f6487e4546743fb9394e20ae6e06932 = L.marker(
+                [47.216307, -1.558252],
+                {}
+            ).addTo(map_9ef5d3363ce24d729b8963eacfa9b942);
+        
+    
+        var custom_icon_eb84578cdece4cbb810eb4c771c15e10 = L.icon({"iconSize": 40, "iconUrl": "https://images.emojiterra.com/twitter/v12/512px/1f414.png"});
+        marker_1f6487e4546743fb9394e20ae6e06932.setIcon(custom_icon_eb84578cdece4cbb810eb4c771c15e10);
+        
+    
+        var popup_a4954b1465ef4e27b4ba3db4052fd424 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_498c51fa68634278930832008d576659 = $(`<div id="html_498c51fa68634278930832008d576659" style="width: 100.0%; height: 100.0%;">Thibault</div>`)[0];
+            popup_a4954b1465ef4e27b4ba3db4052fd424.setContent(html_498c51fa68634278930832008d576659);
+        
+
+        marker_1f6487e4546743fb9394e20ae6e06932.bindPopup(popup_a4954b1465ef4e27b4ba3db4052fd424)
+        ;
+
+        
+    
+    
+            var marker_d35f548036824d4f975c64c80f5038f7 = L.marker(
+                [45.5182122, -73.5727788],
+                {}
+            ).addTo(map_9ef5d3363ce24d729b8963eacfa9b942);
+        
+    
+        var custom_icon_bed108d5d5f04d9ca286c40670d1c49c = L.icon({"iconSize": 40, "iconUrl": "https://www.pngrepo.com/png/232688/170/baboon.png"});
+        marker_d35f548036824d4f975c64c80f5038f7.setIcon(custom_icon_bed108d5d5f04d9ca286c40670d1c49c);
+        
+    
+        var popup_e7faf0d5f35c4cf288725c23f63554cc = L.popup({"maxWidth": "100%"});
+
+        
+            var html_311e3ac352b440c0b1781de3f0916d9a = $(`<div id="html_311e3ac352b440c0b1781de3f0916d9a" style="width: 100.0%; height: 100.0%;">Gaspard</div>`)[0];
+            popup_e7faf0d5f35c4cf288725c23f63554cc.setContent(html_311e3ac352b440c0b1781de3f0916d9a);
+        
+
+        marker_d35f548036824d4f975c64c80f5038f7.bindPopup(popup_e7faf0d5f35c4cf288725c23f63554cc)
+        ;
+
+        
+    
+    
+            var marker_4d559870501149898c52b1c6f39de801 = L.marker(
+                [43.3, 5.4],
+                {}
+            ).addTo(map_9ef5d3363ce24d729b8963eacfa9b942);
+        
+    
+        var custom_icon_6034d9661cc84fcdacc9b35e6ce1d32d = L.icon({"iconSize": 40, "iconUrl": "https://cdn1.iconfinder.com/data/icons/animal-flat-2/128/animal_buffalo-u-zoo-512.png"});
+        marker_4d559870501149898c52b1c6f39de801.setIcon(custom_icon_6034d9661cc84fcdacc9b35e6ce1d32d);
+        
+    
+        var popup_5486f00960fc42ba8b7710715a9c5a5f = L.popup({"maxWidth": "100%"});
+
+        
+            var html_811ec538dbd3481c81d5020f4671bea0 = $(`<div id="html_811ec538dbd3481c81d5020f4671bea0" style="width: 100.0%; height: 100.0%;">Mathieu</div>`)[0];
+            popup_5486f00960fc42ba8b7710715a9c5a5f.setContent(html_811ec538dbd3481c81d5020f4671bea0);
+        
+
+        marker_4d559870501149898c52b1c6f39de801.bindPopup(popup_5486f00960fc42ba8b7710715a9c5a5f)
+        ;
+
+        
+    
+    
+            var marker_701518b1b6544b8298676453a8a259c9 = L.marker(
+                [-33.818398, 150.972911],
+                {}
+            ).addTo(map_9ef5d3363ce24d729b8963eacfa9b942);
+        
+    
+        var custom_icon_b1998233b6f344df926278501460bb86 = L.icon({"iconSize": 40, "iconUrl": "https://cdn2.iconfinder.com/data/icons/animals-92/28/animal_lineal_color-19-512.png"});
+        marker_701518b1b6544b8298676453a8a259c9.setIcon(custom_icon_b1998233b6f344df926278501460bb86);
+        
+    
+        var popup_4af8effca6ce439ca8f6af93ad6fe0a4 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_947d88421e644d6da3c698dfacca75be = $(`<div id="html_947d88421e644d6da3c698dfacca75be" style="width: 100.0%; height: 100.0%;">Baptiste</div>`)[0];
+            popup_4af8effca6ce439ca8f6af93ad6fe0a4.setContent(html_947d88421e644d6da3c698dfacca75be);
+        
+
+        marker_701518b1b6544b8298676453a8a259c9.bindPopup(popup_4af8effca6ce439ca8f6af93ad6fe0a4)
+        ;
+
+        
+    
+    
+            var marker_1ee15d93d10d45e39796a4a51059928c = L.marker(
+                [45.246792, 4.260668],
+                {}
+            ).addTo(map_9ef5d3363ce24d729b8963eacfa9b942);
+        
+    
+        var custom_icon_e42ba9d6a2314971b55841de9858fa85 = L.icon({"iconSize": 40, "iconUrl": "https://i.pinimg.com/originals/ce/76/b8/ce76b874769fa0c3761bc0a9bc064309.png"});
+        marker_1ee15d93d10d45e39796a4a51059928c.setIcon(custom_icon_e42ba9d6a2314971b55841de9858fa85);
+        
+    
+        var popup_71eecca5729b44fcab63e8bff22904ef = L.popup({"maxWidth": "100%"});
+
+        
+            var html_f9ab8cb8a0b0429b900590e2af7b7486 = $(`<div id="html_f9ab8cb8a0b0429b900590e2af7b7486" style="width: 100.0%; height: 100.0%;">Antoine</div>`)[0];
+            popup_71eecca5729b44fcab63e8bff22904ef.setContent(html_f9ab8cb8a0b0429b900590e2af7b7486);
+        
+
+        marker_1ee15d93d10d45e39796a4a51059928c.bindPopup(popup_71eecca5729b44fcab63e8bff22904ef)
+        ;
+
+        
+    
+    
+            var marker_77bf79294d554bd29ffd6c22e070b724 = L.marker(
+                [48.86, 2.33],
+                {}
+            ).addTo(map_9ef5d3363ce24d729b8963eacfa9b942);
+        
+    
+        var custom_icon_bc8f8ae657b5479398f848a710fa213e = L.icon({"iconSize": 40, "iconUrl": "https://cdn.iconscout.com/icon/premium/png-256-thumb/fox-91-563338.png"});
+        marker_77bf79294d554bd29ffd6c22e070b724.setIcon(custom_icon_bc8f8ae657b5479398f848a710fa213e);
+        
+    
+        var popup_81337ae192974126bfe2764d22b41f20 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_b2abe6a1f90c470999e22a2ddd678fda = $(`<div id="html_b2abe6a1f90c470999e22a2ddd678fda" style="width: 100.0%; height: 100.0%;">Kévin</div>`)[0];
+            popup_81337ae192974126bfe2764d22b41f20.setContent(html_b2abe6a1f90c470999e22a2ddd678fda);
+        
+
+        marker_77bf79294d554bd29ffd6c22e070b724.bindPopup(popup_81337ae192974126bfe2764d22b41f20)
+        ;
+
+        
+    
 </script>
