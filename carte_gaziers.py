@@ -1,7 +1,7 @@
 import folium
 import numpy as np
 
-gaziers = [{"nom": "Panda", "lat": 45.5182122, "lon": -73.5727788, "image": "https://dl2.macupdate.com/images/icons256/52971.png"},
+gaziers = [{"nom": "Panda", "lat": 45.45, "lon": -73.55, "image": "https://dl2.macupdate.com/images/icons256/52971.png"},
 {"nom": "Martin", "lat": 43.55, "lon": 6.93, "image": "https://pupuphooray.com/wp-content/uploads/2019/03/dog-icon.png"},
 {"nom": "Thibault", "lat": 47.216307, "lon": -1.558252, "image": "https://images.emojiterra.com/twitter/v12/512px/1f414.png"},
 {"nom": "Gaspard", "lat": 45.5182122, "lon": -73.5727788, "image": "https://www.pngrepo.com/png/232688/170/baboon.png"},
